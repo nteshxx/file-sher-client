@@ -1,0 +1,18 @@
+:root {
+  --main-bg-color: white;
+  --dark-orange: #FF8C00;
+  --secondary-color: #F8F8F8;
+  --border-color: #0288d147;
+  --red: #FF0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  background: var(--main-bg-color);
+}

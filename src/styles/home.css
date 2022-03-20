@@ -1,0 +1,44 @@
+.main {
+    display: flex;
+}
+
+.main img {
+    height: 26rem;
+    margin: 4rem 10rem;
+    width: auto;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: black;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    margin-top: 6rem;
+    text-align: center;
+    line-height: 4.5rem;
+}
+
+.getStarted {
+    padding: 1rem 3rem;
+    color: white;
+    margin-top: 6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--dark-orange);
+    text-decoration: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 100ms ease-in-out;
+}
+
+.getStarted:hover {
+    background-color: var(--red);
+}
