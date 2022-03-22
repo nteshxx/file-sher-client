@@ -3,8 +3,8 @@ import ProgressBar from '../components/ProgressBar';
 
 const Blog = () => {
   return (
-    <>
-      <ProgressBar done="70" />
+    <div className="blog-container" style={{textAlign: 'center', marginTop: '1rem'}}>
+      <h2 style={{ fontWeight: '400', opacity: '0.5' }}>Work in Progress!</h2>
       <ProgressBar done="10" />
       <ProgressBar done="20" />
       <ProgressBar done="30" />
@@ -13,7 +13,7 @@ const Blog = () => {
       <ProgressBar done="80" />
       <ProgressBar done="100" />
       <ProgressBar done="90" />
-    </>
+    </div>
   );
 };
 

@@ -5,9 +5,9 @@ import '../styles/dropzone.css';
 import uploadicon from '../assets/upload.png';
 import ProgressBar from '../components/ProgressBar';
 
-function Dropzone() {
-  const [generatedLink, setGeneratedLink] = useState(null);
-  const [progress, setProgress] = useState(0);
+const Dropzone = () => {
+  const [generatedLink, setGeneratedLink] = useState("http://localhost:3000/f6bad323-b17c-4c76-a161-eb02ff82c911");
+  const [progress, setProgress] = useState(100);
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
   useEffect(() => {
@@ -48,7 +48,10 @@ function Dropzone() {
           </p>
         </div>
       ) : progress === 100 ? (
-        <h3 className="downloadlink">{generatedLink}</h3>
+        <div className="link-container">
+          <h3 className="download-link">{generatedLink}</h3>
+          <button className="copy-button" onClick={() => {navigator.clipboard.writeText(generatedLink)}}>Copy</button>
+        </div>
       ) : (
         <ProgressBar done={progress} />
       )}

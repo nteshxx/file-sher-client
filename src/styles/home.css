@@ -25,7 +25,7 @@
 }
 
 .getStarted {
-    padding: 1rem 3rem;
+    padding: 1rem 2.5rem;
     color: white;
     margin-top: 5rem;
     border-radius: 8px;
@@ -33,9 +33,10 @@
     background: var(--dark-orange);
     text-decoration: none;
     border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
-    font-weight: 600;
     letter-spacing: 1px;
+    font-weight: 600;
     transition: all 100ms ease-in-out;
 }
 
