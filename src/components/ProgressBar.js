@@ -11,7 +11,8 @@ const ProgressBar = ({ done }) => {
         background: '#FF8C00',
         zIndex: '2',
         position: 'absolute',
-        top: 0
+        top: 0,
+        borderRadius: '10px'
       }}></div>
     </div>
   );
