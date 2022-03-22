@@ -8,7 +8,6 @@ const Download = () => {
   const [downloadURL, setDownloadURL] = useState(null);
 
   const downloadFile = () => {
-    console.log('button clicked')
     let filePath = `${downloadURL}`;
     axios.get(`${filePath}`, {
         responseType: 'blob',

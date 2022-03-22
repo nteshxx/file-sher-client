@@ -1,0 +1,17 @@
+.progress-bar {
+  opacity: 1;
+  margin: 2rem auto;
+  width: 70%;
+  min-height: 20px;
+  background-color: var(--secondary-color);
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.upload-text {
+  color: black;
+  z-index: 4;
+}

@@ -6,6 +6,9 @@
   margin: 1rem auto;
   text-align: center;
   transition: 200ms all ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dropzone p {
@@ -21,4 +24,8 @@
 #browseBtn {
   color: #2196f3;
   cursor: pointer;
+}
+
+.downloadlink {
+  line-height: 400px;
 }
