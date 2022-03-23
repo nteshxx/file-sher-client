@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Download from "./pages/Download";
-import Blog from "./pages/Blog";
+import Faqs from "./pages/Faqs";
 import About from "./pages/About";
 
 const Routing = () => {
@@ -12,7 +12,7 @@ const Routing = () => {
       <Route exact path="/" element={<Home />} />
       <Route exact path="/upload" element={<Upload />}></Route>
       <Route exact path="/download" element={<Download />}></Route>
-      <Route exact path="/blog" element={<Blog />}></Route>
+      <Route exact path="/faqs" element={<Faqs />}></Route>
       <Route exact path="/about" element={<About />}></Route>
     </Routes>
   );

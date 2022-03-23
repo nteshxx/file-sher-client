@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressBar from '../components/ProgressBar';
 
-const Blog = () => {
+const Faqs = () => {
   return (
     <div className="blog-container" style={{textAlign: 'center', marginTop: '1rem'}}>
       <h2 style={{ fontWeight: '400', opacity: '0.5' }}>Work in Progress!</h2>
@@ -17,4 +17,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Faqs;

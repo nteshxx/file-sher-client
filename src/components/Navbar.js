@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/navbar.css";
 import hamburger from "../assets/hamburger.svg";
 import cross from "../assets/cross.svg";
+import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -22,12 +23,13 @@ const Navbar = () => {
       <div id="navbar">
         <nav id="nav">
           <div id="logo">
+            <img src={logo} alt="" />
             <Link className="logo-text" to="/">File Sher</Link>
           </div>
           <div id="navigation">
             <Link className="navlinks" to="/upload">Upload</Link>
             <Link className="navlinks" to="/download">Download</Link>
-            <Link className="navlinks" to="/blog">Blog</Link>
+            <Link className="navlinks" to="/faqs">FAQs</Link>
             <Link className="navlinks" to="/about">About Us</Link>
           </div>
         </nav>
@@ -41,16 +43,16 @@ const MobileNavBar = () => {
     <div id="mobile-navbar">
       <ul>
         <li>
-          <a href="#about">Upload</a>
+          <Link className="navlinks" to="/upload">Upload</Link>
         </li>
         <li>
-          <a href="#services">Download</a>
+          <Link className="navlinks" to="/download">Download</Link>
         </li>
         <li>
-          <a href="#blogs">Blog</a>
+          <Link className="navlinks" to="/faqs">FAQs</Link>
         </li>
         <li>
-          <a href="#contacts">About Us</a>
+          <Link className="navlinks" to="/about">About Us</Link>
         </li>
       </ul>
     </div>
