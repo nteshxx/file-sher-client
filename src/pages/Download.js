@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Download = () => {
   const [downloadURL, setDownloadURL] = useState(null);
 
-  const notifyError = () => toast("Something went wrong!");
+  const notifyError = () => toast("Link has been expired or invalid!");
 
   const notifyDownload = () => toast("Downloading...");
 
@@ -19,13 +19,9 @@ const Download = () => {
         responseType: 'blob',
     }).then((res) => {
       notifyDownload();
-      let filename = filePath.replace(/^.*[\\/]/, '')
-      let fileExtension;
-      fileExtension= filePath.split('.');
-      fileExtension =fileExtension[fileExtension.length -1];
-      fileDownload(res.data, `${filename}.${fileExtension}`);
+      let filename = filePath.split('/').pop();
+      fileDownload(res.data, `file-sher-${filename}`);
     }).catch((err) => {
-      console.log(err);
       notifyError();
     });
   }

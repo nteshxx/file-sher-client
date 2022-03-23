@@ -42,7 +42,6 @@ const Dropzone = () => {
         setProgress(100);
       })
       .catch((error) => {
-        console.log(error);
         notifyError();
       });
   }, [acceptedFiles]);
