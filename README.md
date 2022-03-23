@@ -4,7 +4,7 @@ It is a file sharing app which takes a file and generates an unique download lin
 
 ## How to Setup on Local server
 
- run commands:
+ git clone this repo and run these commands inside the main folder:
 
 ### `npm install`
 
