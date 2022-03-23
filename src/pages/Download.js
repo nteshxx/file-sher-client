@@ -3,20 +3,30 @@ import link from '../assets/link.svg';
 import '../styles/download.css';
 import fileDownload from 'js-file-download';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Download = () => {
   const [downloadURL, setDownloadURL] = useState(null);
+
+  const notifyError = () => toast("Something went wrong!");
+
+  const notifyDownload = () => toast("Downloading...");
 
   const downloadFile = () => {
     let filePath = `${downloadURL}`;
     axios.get(`${filePath}`, {
         responseType: 'blob',
     }).then((res) => {
+      notifyDownload();
       let filename = filePath.replace(/^.*[\\/]/, '')
       let fileExtension;
       fileExtension= filePath.split('.');
       fileExtension =fileExtension[fileExtension.length -1];
       fileDownload(res.data, `${filename}.${fileExtension}`);
+    }).catch((err) => {
+      console.log(err);
+      notifyError();
     });
   }
 
@@ -29,6 +39,7 @@ const Download = () => {
         </div>
       </div>
       <button className="download-btn" onClick={() => downloadFile()}>Download</button>
+      <ToastContainer />
     </div>
   )
 }

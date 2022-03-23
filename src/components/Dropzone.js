@@ -4,11 +4,21 @@ import { useDropzone } from 'react-dropzone';
 import '../styles/dropzone.css';
 import uploadicon from '../assets/upload.png';
 import ProgressBar from '../components/ProgressBar';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Dropzone = () => {
-  const [generatedLink, setGeneratedLink] = useState("http://localhost:3000/f6bad323-b17c-4c76-a161-eb02ff82c911");
-  const [progress, setProgress] = useState(100);
+  const [generatedLink, setGeneratedLink] = useState(null);
+  const [progress, setProgress] = useState(0);
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
+
+  const notifyLinkCopied = () => toast("Link Copied!");
+  const notifyError = () => toast("Something went wrong!");
+
+  const copyClickHandler = () => {
+    navigator.clipboard.writeText(generatedLink);
+    notifyLinkCopied();
+  }
 
   useEffect(() => {
     var formData = new FormData();
@@ -33,6 +43,7 @@ const Dropzone = () => {
       })
       .catch((error) => {
         console.log(error);
+        notifyError();
       });
   }, [acceptedFiles]);
 
@@ -50,11 +61,12 @@ const Dropzone = () => {
       ) : progress === 100 ? (
         <div className="link-container">
           <h3 className="download-link">{generatedLink}</h3>
-          <button className="copy-button" onClick={() => {navigator.clipboard.writeText(generatedLink)}}>Copy</button>
+          <button className="copy-button" onClick={() => copyClickHandler()}>Copy</button>
         </div>
       ) : (
         <ProgressBar done={progress} />
       )}
+      <ToastContainer />
     </section>
   );
 }
