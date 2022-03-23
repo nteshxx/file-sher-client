@@ -19,8 +19,9 @@ const Download = () => {
         responseType: 'blob',
     }).then((res) => {
       notifyDownload();
-      let filename = filePath.split('/').pop();
-      fileDownload(res.data, `file-sher-${filename}`);
+      let filename = filePath.split('/');
+      let extension = filename.pop();
+      fileDownload(res.data, `file-sher-${filename.pop()}.${extension}`);
     }).catch((err) => {
       notifyError();
     });

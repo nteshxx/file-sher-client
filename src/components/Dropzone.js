@@ -7,6 +7,8 @@ import ProgressBar from '../components/ProgressBar';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const { REACT_APP_BACKEND_API } = process.env;
+
 const Dropzone = () => {
   const [generatedLink, setGeneratedLink] = useState(null);
   const [progress, setProgress] = useState(0);
@@ -24,7 +26,7 @@ const Dropzone = () => {
     var formData = new FormData();
     formData.append('myfile', acceptedFiles[0]);
     axios
-      .post('https://inshare-api.onrender.com/api/files', formData, {
+      .post(`${REACT_APP_BACKEND_API}/api/files`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
