@@ -1,10 +1,11 @@
 import React from 'react';
 import ProgressBar from '../components/ProgressBar';
+import '../styles/faqs.css';
 
 const Faqs = () => {
   return (
-    <div className="blog-container" style={{textAlign: 'center', marginTop: '1rem'}}>
-      <h2 style={{ fontWeight: '400', opacity: '0.5' }}>Work in Progress!</h2>
+    <div className="faqs-container">
+      <h2 className='wip'>Work in Progress!</h2>
       <ProgressBar done="10" />
       <ProgressBar done="20" />
       <ProgressBar done="30" />

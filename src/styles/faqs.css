@@ -1,0 +1,29 @@
+.faqs-container { 
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.wip {
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+/* ipad */
+@media (max-width: 1024px) {
+  .faqs-container {
+    margin-top: 8rem;
+  }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+/* iphone */
+@media (max-width: 576px) {
+  .faqs-container {
+    margin-top: 3rem;
+  }
+}

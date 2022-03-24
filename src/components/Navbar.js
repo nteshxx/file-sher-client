@@ -42,18 +42,10 @@ const MobileNavBar = () => {
   return (
     <div id="mobile-navbar">
       <ul>
-        <li>
-          <Link className="navlinks" to="/upload">Upload</Link>
-        </li>
-        <li>
-          <Link className="navlinks" to="/download">Download</Link>
-        </li>
-        <li>
-          <Link className="navlinks" to="/faqs">FAQs</Link>
-        </li>
-        <li>
-          <Link className="navlinks" to="/about">About Us</Link>
-        </li>
+        <Link className="navlinks" to="/upload">Upload</Link>
+        <Link className="navlinks" to="/download">Download</Link>
+        <Link className="navlinks" to="/faqs">FAQs</Link>
+        <Link className="navlinks" to="/about">About Us</Link>
       </ul>
     </div>
   );
