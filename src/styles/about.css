@@ -1,0 +1,18 @@
+.about {
+  text-align: center;
+  margin-top: 160px;
+  line-height: 30px;
+}
+
+.about a {
+  margin: 0.5rem;
+}
+
+.about a img {
+  height: 40px;
+  width: auto;
+}
+
+.links {
+  margin-top: 1rem;
+}
