@@ -14,8 +14,25 @@ const Dropzone = () => {
   const [progress, setProgress] = useState(0);
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
-  const notifyLinkCopied = () => toast("Link Copied!");
-  const notifyError = () => toast("Something went wrong!");
+  const notifyLinkCopied = () => toast.success('Link Copied!', {
+    position: "top-right",
+    autoClose: 1500,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
+
+  const notifyError = () => toast.error('Something went wrong!', {
+    position: "top-right",
+    autoClose: 1500,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 
   const copyClickHandler = () => {
     navigator.clipboard.writeText(generatedLink);

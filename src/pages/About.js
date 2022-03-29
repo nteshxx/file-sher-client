@@ -6,7 +6,7 @@ import linkedin from '../assets/linkedin.svg';
 const About = () => {
   return (
     <div className="about">
-      <h2>Nitesh M. Yadav</h2>
+      <h2>Nitesh Yadav</h2>
       <p>MERN Stack Developer</p>
       <div className='links'>
         <a href='https://github.com/nteshxx/file-sher-client'><img src={github} alt=''/></a>

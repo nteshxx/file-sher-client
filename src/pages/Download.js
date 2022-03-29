@@ -9,9 +9,25 @@ import 'react-toastify/dist/ReactToastify.css';
 const Download = () => {
   const [downloadURL, setDownloadURL] = useState(null);
 
-  const notifyError = () => toast("Link has been expired or invalid!");
+  const notifyError = () => toast.error('Link has been expired or invalid!', {
+    position: "top-right",
+    autoClose: 1500,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 
-  const notifyDownload = () => toast("Downloading...");
+  const notifyDownload = () => toast.success('Downloading...', {
+    position: "top-right",
+    autoClose: 1500,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 
   const downloadFile = () => {
     let filePath = `${downloadURL}`;
