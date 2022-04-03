@@ -18,4 +18,4 @@ const Faqs = () => {
   );
 };
 
-export default Faqs;
+export default React.memo(Faqs);

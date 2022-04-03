@@ -11,4 +11,4 @@ const Upload = () => {
   )
 }
 
-export default Upload;
+export default React.memo(Upload);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "../styles/navbar.css";
 import hamburger from "../assets/hamburger.svg";
 import cross from "../assets/cross.svg";
@@ -51,4 +51,4 @@ const MobileNavBar = () => {
   );
 };
 
-export default Navbar;
+export default React.memo(Navbar);
