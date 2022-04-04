@@ -12,4 +12,4 @@ It is a file sharing app which takes a file and generates an unique download lin
 
 ## Live version Deployed here.
 
-https://file-sher-client.vercel.app
+https://filesher.vercel.app
