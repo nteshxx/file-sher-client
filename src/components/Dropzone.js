@@ -10,8 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const { REACT_APP_BACKEND_API } = process.env;
 
 const Dropzone = () => {
-  const [generatedLink, setGeneratedLink] = useState('https://file-sher-api.onrender.com/files/download/4fdb139e-fce9-4af9-9f99-c7c38c90fd9e/jpg');
-  const [progress, setProgress] = useState(100);
+  const [generatedLink, setGeneratedLink] = useState('');
+  const [progress, setProgress] = useState(0);
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
   const[text, setText] = useState('Copy');
 
