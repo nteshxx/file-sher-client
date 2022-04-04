@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link className="navlinks" to="/upload">Upload</Link>
             <Link className="navlinks" to="/download">Download</Link>
             <Link className="navlinks" to="/faqs">FAQs</Link>
-            <Link className="navlinks" to="/about">About Us</Link>
+            <Link className="navlinks" to="/about">About Me</Link>
           </div>
         </nav>
       </div>
@@ -45,7 +45,7 @@ const MobileNavBar = () => {
         <Link className="navlinks" to="/upload">Upload</Link>
         <Link className="navlinks" to="/download">Download</Link>
         <Link className="navlinks" to="/faqs">FAQs</Link>
-        <Link className="navlinks" to="/about">About Us</Link>
+        <Link className="navlinks" to="/about">About Me</Link>
       </ul>
     </div>
   );

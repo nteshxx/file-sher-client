@@ -10,19 +10,10 @@ import 'react-toastify/dist/ReactToastify.css';
 const { REACT_APP_BACKEND_API } = process.env;
 
 const Dropzone = () => {
-  const [generatedLink, setGeneratedLink] = useState(null);
-  const [progress, setProgress] = useState(0);
+  const [generatedLink, setGeneratedLink] = useState('https://file-sher-api.onrender.com/files/download/4fdb139e-fce9-4af9-9f99-c7c38c90fd9e/jpg');
+  const [progress, setProgress] = useState(100);
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
-
-  const notifyLinkCopied = () => toast.success('Link Copied!', {
-    position: "top-right",
-    autoClose: 1500,
-    hideProgressBar: true,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    });
+  const[text, setText] = useState('Copy');
 
   const notifyError = () => toast.error('Something went wrong!', {
     position: "top-right",
@@ -36,7 +27,7 @@ const Dropzone = () => {
 
   const copyClickHandler = () => {
     navigator.clipboard.writeText(generatedLink);
-    notifyLinkCopied();
+    text === 'Copy' ? setText('Copied!') : setText('Copy');
   }
 
   useEffect(() => {
@@ -70,16 +61,22 @@ const Dropzone = () => {
       {progress === 0 ? (
         <div {...getRootProps({ className: 'dropzone' })}>
           <input {...getInputProps()} />
-          <img src={uploadicon} alt="" />
+          <div><img src={uploadicon} alt="" /></div>
+          <div>
           <p>
             You can always drag and drop your files here, or{' '}
             <span id="browseBtn">browse</span> them
           </p>
+          </div>
         </div>
       ) : progress === 100 ? (
         <div className="link-container">
-          <h3 className="download-link">{generatedLink}</h3>
-          <button className="copy-button" onClick={() => copyClickHandler()}>Copy</button>
+          <div className='download-link-div'>
+            <h3 className="download-link">{generatedLink}</h3>
+            <div className='copy-button-div'>
+              <button className="copy-button" onClick={() => copyClickHandler()}>{text}</button>
+            </div>
+          </div>
         </div>
       ) : (
         <ProgressBar done={progress} />

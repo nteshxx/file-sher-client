@@ -57,4 +57,4 @@ const Download = () => {
   )
 }
 
-export default React.memo(Download);
+export default Download;

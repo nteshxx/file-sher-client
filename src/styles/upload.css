@@ -1,27 +1,5 @@
 .note {
   text-align: right;
-  margin-right: 10rem;
   margin-top: -3rem;
-}
-
-/* ipad */
-@media (max-width: 1024px) {
-  .note {
-    margin-right: 6rem;
-    margin-top: -3rem;
-  }
-}
-
-@media (max-width: 992px) {
-}
-
-@media (max-width: 768px) {
-}
-
-/* iphone */
-@media (max-width: 576px) {
-  .note {
-    margin-right: 3rem;
-    margin-top: -1rem;
-  }
+  margin-right: 10%;
 }
